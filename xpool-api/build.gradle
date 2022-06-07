@@ -7,7 +7,7 @@ java {
         languageVersion = JavaLanguageVersion.of(11)
     }
 }
-
+group = 'io.nextflow'
 version '0.1.0'
 
 repositories {

@@ -55,13 +55,15 @@ sourceSets {
 }
 
 dependencies {
+
     // This dependency is exported to consumers, that is to say found on their compile classpath.
     compileOnly 'org.slf4j:slf4j-api:1.7.10'
     compileOnly 'org.pf4j:pf4j:3.4.1'
-
     compileOnly 'io.nextflow:nextflow:22.04.0'
-    compileOnly project(':xpool-api')
     // add here plugins depepencies
+    implementation project(':xpool-api')
+    // implementation 'io.nextflow:xpool-api:0.1.0'
+    // api 'io.nextflow:xpool-api:0.1.0'
 
     // test configuration
     testImplementation 'io.nextflow:nextflow:22.04.0'
