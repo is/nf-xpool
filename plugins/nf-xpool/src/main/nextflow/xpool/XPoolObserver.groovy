@@ -14,6 +14,29 @@
  * limitations under the License.
  */
 
-rootProject.name = 'nf-xpool'
-include 'plugins'
-include('plugins:nf-xpool')
+package nextflow.xpool
+
+import groovy.transform.CompileStatic
+import groovy.util.logging.Slf4j
+import nextflow.Session
+import nextflow.trace.TraceObserver
+
+/**
+ * Example pipeline events observer
+ *
+ * @author Paolo Di Tommaso <paolo.ditommaso@gmail.com>
+ */
+@Slf4j
+@CompileStatic
+class XPoolObserver implements TraceObserver {
+
+    @Override
+    void onFlowCreate(Session session) {
+        log.info "Pipeline is starting! 🚀"
+    }
+
+    @Override
+    void onFlowComplete() {
+        log.info "Pipeline complete! 👋"
+    }
+}

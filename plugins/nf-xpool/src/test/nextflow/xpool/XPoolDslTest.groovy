@@ -1,8 +1,7 @@
-package nextflow.hello
+package nextflow.xpool
 
 import nextflow.Channel
 import nextflow.extension.ChannelExtensionDelegate
-import nextflow.plugin.Plugins
 import spock.lang.Specification
 import spock.lang.Timeout
 
@@ -12,7 +11,7 @@ import spock.lang.Timeout
  *
  */
 @Timeout(10)
-class HelloDslTest extends Specification{
+class XPoolDslTest extends Specification{
 
     def setup () {
         ChannelExtensionDelegate.reloadExtensionPoints()
@@ -21,7 +20,7 @@ class HelloDslTest extends Specification{
     def 'should perform a hi and create a channel' () {
         when:
         def SCRIPT = '''
-            channel.hello.reverse('hi!') 
+            channel.xpool.reverse('hi!') 
             '''
         and:
         def result = new MockScriptRunner([:]).setScript(SCRIPT).execute()
@@ -44,6 +43,6 @@ class HelloDslTest extends Specification{
         result.val == Channel.STOP
 
         and:
-        HelloExtension.goodbyeMessage == 'Bye bye folks'.toUpperCase()
+        XPoolExtension.goodbyeMessage == 'Bye bye folks'.toUpperCase()
     }
 }

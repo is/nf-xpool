@@ -1,9 +1,8 @@
-package nextflow.hello
+package nextflow.xpool
 
 import groovy.util.logging.Slf4j
 import groovyx.gpars.dataflow.DataflowReadChannel
 import groovyx.gpars.dataflow.DataflowWriteChannel
-import groovyx.gpars.dataflow.expression.DataflowExpression
 import nextflow.Channel
 import nextflow.Global
 import nextflow.Session
@@ -20,8 +19,8 @@ import java.util.concurrent.CompletableFuture
  *
  */
 @Slf4j
-@Scoped('hello')
-class HelloExtension extends ChannelExtensionPoint{
+@Scoped('xpool')
+class XPoolExtension extends ChannelExtensionPoint{
 
     /*
      * A session hold information about current execution of the script

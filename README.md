@@ -25,7 +25,7 @@ allowing to include them into the script
     Manifest file defining the plugin attributes e.g. name, version, etc.
     The attribute `Plugin-Class` declares the plugin main class. This class 
     should extend the base class `nextflow.plugin.BasePlugin` e.g. 
-    `nextflow.hello.HelloPlugin`.
+    `nextflow.xpool.XPoolPlugin`.
 
 - `plugins/nf-hello/src/resources/META-INF/extensions.idx`
     

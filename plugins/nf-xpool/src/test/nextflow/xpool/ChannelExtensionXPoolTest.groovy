@@ -1,9 +1,8 @@
-package nextflow.hello
+package nextflow.xpool
 
 import groovyx.gpars.dataflow.DataflowQueue
 import nextflow.Channel
 import nextflow.Session
-import nextflow.extension.ChannelExtensionDelegate
 import spock.lang.Specification
 
 
@@ -11,7 +10,7 @@ import spock.lang.Specification
  * @author : jorge <jorge.aguilera@seqera.io>
  *
  */
-class ChannelExtensionHelloTest extends Specification{
+class ChannelExtensionXPoolTest extends Specification{
 
     def "should create a channel from hello"(){
 
@@ -19,10 +18,10 @@ class ChannelExtensionHelloTest extends Specification{
         def session = Mock(Session)
 
         and:
-        def helloExtension = new HelloExtension(); helloExtension.init(session)
+        def xPoolExtension = new XPoolExtension(); xPoolExtension.init(session)
 
         when:
-        def result = helloExtension.reverse("Hi")
+        def result = xPoolExtension.reverse("Hi")
 
         then:
         result.val == 'iH'
@@ -35,7 +34,7 @@ class ChannelExtensionHelloTest extends Specification{
         def session = Mock(Session)
 
         and:
-        def helloExtension = new HelloExtension(); helloExtension.init(session)
+        def helloExtension = new XPoolExtension(); helloExtension.init(session)
 
         and:
         def ch = new DataflowQueue()

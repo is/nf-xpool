@@ -14,11 +14,10 @@
  * limitations under the License.
  */
 
-package nextflow.hello
+package nextflow.xpool
 
 import groovy.transform.CompileStatic
 import nextflow.plugin.BasePlugin
-import nextflow.plugin.Scoped
 import org.pf4j.PluginWrapper
 
 /**
@@ -27,9 +26,9 @@ import org.pf4j.PluginWrapper
  * @author Paolo Di Tommaso <paolo.ditommaso@gmail.com>
  */
 @CompileStatic
-class HelloPlugin extends BasePlugin {
+class XPoolPlugin extends BasePlugin {
 
-    HelloPlugin(PluginWrapper wrapper) {
+    XPoolPlugin(PluginWrapper wrapper) {
         super(wrapper)
     }
 }
