@@ -3,6 +3,8 @@ package nextflow.xpool;
 import nextflow.Session;
 import nextflow.trace.TraceObserver;
 import nextflow.trace.TraceObserverFactory;
+import nextflow.xpool.api.XPool;
+import nextflow.xpool.api.XPoolObserver;
 
 import java.util.ArrayList;
 import java.util.Collection;

@@ -1,4 +1,4 @@
-package nextflow.xpool;
+package nextflow.xpool.api;
 
 import java.util.Map;
 

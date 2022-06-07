@@ -15,5 +15,8 @@
  */
 
 rootProject.name = 'nf-xpool'
+include 'xpool-api'
 include 'plugins'
 include('plugins:nf-xpool')
+
+
